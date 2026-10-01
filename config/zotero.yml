@@ -1,0 +1,24 @@
+citation_key_pattern: author_year_firstword
+export_format: Better BibTeX
+input_bib: references/references.bib
+output_papers: data/papers.csv
+private_paths:
+  - "*.pdf"
+  - "*.sqlite"
+  - "references/private/*"
+required_fields:
+  - title
+  - year
+recommended_fields:
+  - doi
+  - pmid
+  - author
+  - journal
+  - abstract
+project_tags:
+  - APAP
+  - IR
+  - CRLM
+  - RNA-seq
+  - STAT3
+  - NF-kB
