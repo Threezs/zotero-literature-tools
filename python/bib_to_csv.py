@@ -7,15 +7,15 @@ import re
 import sys
 from pathlib import Path
 
-FIELD = re.compile(r"(?im)^\s*([A-Za-z][A-Za-z0-9_-]*)\s*=\s*[\{"']([^\}"']*)")
+FIELD = re.compile(r'''(?im)^\\s*([A-Za-z][A-Za-z0-9_-]*)\\s*=\\s*[\\{"']([^}"']*)''')
 
 
 def entries(text: str):
-    chunks = re.split(r"(?=^\s*@)", text, flags=re.M)
+    chunks = re.split(r"(?=^\\s*@)", text, flags=re.M)
     for chunk in chunks:
         if not chunk.strip() or chunk.lstrip().startswith("@comment"):
             continue
-        head = re.search(r"@\w+\s*\{\s*([^,]+),", chunk)
+        head = re.search(r"@\\w+\\s*\\{\\s*([^,]+),", chunk)
         if not head:
             continue
         row = {"citation_key": head.group(1).strip()}
