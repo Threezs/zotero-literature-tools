@@ -36,3 +36,15 @@ config/zotero.yml            导出字段和隐私规则
 - [bio5paper/zotero-better-notes](https://github.com/wshuyi/zotero-better-notes)
 - [r-lib/bibtex](https://github.com/r-lib/bibtex)
 
+
+
+## 方法论文字段
+
+录入 Nature Methods 或其他方法论文时，除 DOI/PMID 外，建议补充：
+
+- functional_category：preprocessing、trajectory、transcriptomics、spatial_context、foundation_models 或 cross_species；
+- execution_mode：baseline-function、runtime-required、integration-required 或 manifest-only；
+- official_repo、release/tag、checkpoint URL、许可证和 SHA-256；
+- minimal_input、experimental_unit、baseline_to_compare 和 validation_status。
+
+这些字段可以直接和 [bioinformatics-literature-workbench](https://github.com/Threezs/bioinformatics-literature-workbench) 的 data/method_function_map.csv 对齐。
