@@ -1,0 +1,14 @@
+*.pdf
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.json
+*.bak
+references/private/*
+data/raw/*
+data/processed/*
+outputs/*
+.env
+.Rhistory
+__pycache__/
+*.pyc
